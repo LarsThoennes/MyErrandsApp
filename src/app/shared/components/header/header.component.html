@@ -1,0 +1,57 @@
+<header>
+    <div class="responsive-header">
+        <h1>Willkommen in der Errands App, NAME</h1>
+
+        <button (click)="openBurgerMenu()">
+            <img src="./../../../../assets/images/button/menu.svg">
+        </button>
+    </div>
+</header>
+
+<div *ngIf="showBurgerMenu" class="bruger-menu">
+ <div class="responsive-drop-down">
+
+    <div class="menu-item">
+        <button>
+            <img src="./../../../../assets/images/drop-down-menu/new-list.png">
+        </button>
+        <span class="tooltip">New list</span>
+    </div>
+
+    <div class="menu-item">
+        <button>
+            <img src="./../../../../assets/images/drop-down-menu/new-todo.png">
+        </button>
+        <span class="tooltip">New todo</span>
+    </div>
+
+    <div class="menu-item">
+        <button>
+            <img src="./../../../../assets/images/drop-down-menu/friends.png">
+        </button>
+        <span class="tooltip">Friends</span>
+    </div>
+
+    <div class="menu-item">
+        <button>
+            <img src="./../../../../assets/images/drop-down-menu/stats.png">
+        </button>
+        <span class="tooltip">Stats</span>
+    </div>
+
+    <div class="menu-item">
+        <button>
+            <img src="./../../../../assets/images/drop-down-menu/user.png">
+        </button>
+        <span class="tooltip">Account</span>
+    </div>
+
+    <div class="menu-item">
+        <button>
+            <img src="./../../../../assets/images/drop-down-menu/settings.png">
+        </button>
+        <span class="tooltip">Settings</span>
+    </div>
+
+ </div>
+</div>

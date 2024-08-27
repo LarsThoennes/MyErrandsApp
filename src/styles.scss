@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    background-color: rgb(118, 149, 255);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 152, 116);
+    height: 50px;
+    font-family: "New Amsterdam", sans-serif;
+    box-shadow: 0 -10px 6px rgba(0, 0, 0, 0.2);;
+
+    .responsive-footer {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 1440px;
+
+        img {
+            height: 40px;
+            width: 40px;
+            padding: 10px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+    }
+}
+
+

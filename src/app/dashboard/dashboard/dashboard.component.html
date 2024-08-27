@@ -1,0 +1,19 @@
+<div class="dashboard">
+    <app-header></app-header>
+    <div class="hide-content">
+        <app-add-new-todo *ngIf="addNewTodo"></app-add-new-todo>
+    </div>
+    <div class="content">
+
+        <div class="todo-section">
+            <app-today-todos></app-today-todos>
+            <app-add-new-todo></app-add-new-todo>
+        </div>
+
+        <div class="list-section">
+            <app-new-list></app-new-list>
+        </div>
+    </div>
+    <app-footer class="dashboard-footer"></app-footer>
+</div>
+

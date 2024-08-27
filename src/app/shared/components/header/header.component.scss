@@ -1,0 +1,156 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 100vw;
+    background-color: rgb(255, 152, 116);
+    font-family: "New Amsterdam", sans-serif;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+
+    .responsive-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 1440px;
+
+        h1 {
+            margin: 0;
+            margin-left: 20px;
+            color: rgb(255, 215, 196);
+        }
+
+        button {
+            border: none;
+            background-color: #FF9874;
+
+            &:hover {
+                cursor: pointer;
+
+                img {
+                    animation: 0.3s scale-up;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+.bruger-menu {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 100vw;
+    background-color: rgb(255, 215, 196);
+    animation: drop-down 1s ;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+
+    .responsive-drop-down {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 1440px;
+        padding-top: 10px;
+
+        .menu-item {
+            position: relative;
+            display: inline-block;
+
+            .tooltip {
+                position: absolute;
+                top: 80px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(0, 0, 0, 0.75);
+                color: #fff;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 20px;
+                white-space: nowrap;
+                opacity: 0;
+                transition: visibility 0s, opacity 0.1s ease-in-out;
+                font-family: "New Amsterdam", sans-serif;
+                margin-top: 10px;
+
+            }
+
+            button {
+                border: none;
+                background-color: rgb(157, 189, 255);
+                border-radius: 10px;
+                animation: show-button 2s;
+                opacity: 1;
+                box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+                
+    
+                &:hover {
+                    cursor: pointer;
+                    animation: button-hover 0.3s;
+                    transform: scale(1.1);
+                }
+    
+                img {
+                    height: 70px;
+                    width: 70px;
+                }
+            }
+
+            &:hover {
+                .tooltip {
+                    animation: tooltip-drop-down 0.4s;
+                    margin-top: 10px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@keyframes tooltip-drop-down {
+    0% {
+       margin-top: +50px;
+    }
+    100% {
+        margin-top: 10px;
+    }
+}
+
+@keyframes button-hover {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes show-button {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scale-up {
+    0% {
+        transform: scale(1);
+    } 
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes drop-down {
+    0% {
+        height: 0px;
+        background-color: rgb(255, 152, 116);
+    } 
+    100% {
+        height: 200px;
+        background-color: rgb(255, 215, 196);
+    }
+}

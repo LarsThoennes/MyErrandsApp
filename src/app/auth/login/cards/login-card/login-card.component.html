@@ -1,0 +1,28 @@
+<div class="auth-card">
+  <div>
+    <h1>Login</h1>
+  </div>
+
+  <div form="login()" class="card-input-section">
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="Passwort" required>
+    <div class="checkbox-section">
+        <input type="checkbox" required>
+        <span>Please read the <a href="#">Privacy Police</a></span>
+    </div>
+
+    <div class="card-button-section">
+       <div>
+           <button (click)="login()" class="login-button">Anmelden</button>
+           <button (click)="signUp()" class="sign-up-button">Regristrieren</button>
+       </div>
+
+       <div class="card-google-button">
+           <button>
+            <img class="google-img" src="./../../../../assets/images/button/google.png">
+            Google Anmeldung
+           </button>
+       </div>
+    </div>
+  </div>
+</div>
