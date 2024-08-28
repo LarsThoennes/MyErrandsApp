@@ -6,11 +6,12 @@ import { TodayTodosComponent } from '../todo-section/today-todos/today-todos.com
 import { NewListComponent } from '../list-section/new-list/new-list.component';
 import { DataService } from '../../shared/services/data.service';
 import { CommonModule } from '@angular/common';
+import { AddNewTodoComponentCard } from '../../shared/components/add-new-todo/add-new-todo.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, AddNewTodoComponent, TodayTodosComponent, NewListComponent, AddNewTodoComponent, CommonModule],
+  imports: [HeaderComponent, FooterComponent, AddNewTodoComponent, TodayTodosComponent, NewListComponent, AddNewTodoComponentCard, CommonModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })

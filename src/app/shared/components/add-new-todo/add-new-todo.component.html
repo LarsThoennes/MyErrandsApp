@@ -1,1 +1,44 @@
-<p>add-new-todo works!</p>
+<div class="card">
+    <div class="card-head">
+        <button (click)="closeCard()">
+            <img src="./../../../../assets/images/button/close.png">
+        </button>
+    </div>
+
+    <div class="card-content">
+        <form (ngSubmit)="onSubmit()" #todoForm="ngForm">
+            <div class="card-content-first-section">
+                <div>
+                    <input class="text-input" type="text" name="title" [(ngModel)]="formData.title" placeholder="Titel hinzufügen" required/>
+                </div>
+                <div class="event-toggle">
+                    <label for="event-switch">Besondere Aufgabe</label>
+                    <input type="checkbox" id="event-switch-special-task" name="specialTask" [(ngModel)]="formData.specialTask" class="event-switch"/>
+                </div>
+            </div>
+        
+            <div class="card-content-second-section">
+                <div>
+                    <div class="event-toggle">
+                        <div class="choosen-color" [style.background-color]="choosenColor"></div>
+                        <button class="open-color-pallet" type="button" (click)="showColorPallet()" id="event-switch-special-task">Andere Farbe auswählen</button>
+                    </div>
+                </div>
+                <div *ngIf="colorPallet" class="color-picker">
+                    <div class="color-options">
+                        <div (click)="chooseColor('#ff0000')" class="color-option" style="background-color: #ff0000;" data-color="#ff0000"></div>
+                        <div (click)="chooseColor('#00ff00')" class="color-option" style="background-color: #00ff00;" data-color="#00ff00"></div>
+                        <div (click)="chooseColor('#0000ff')" class="color-option" style="background-color: #0000ff;" data-color="#0000ff"></div>
+                        <div (click)="chooseColor('#ffff00')" class="color-option" style="background-color: #ffff00;" data-color="#ffff00"></div>
+                        <div (click)="chooseColor('#ff00ff')" class="color-option" style="background-color: #ff00ff;" data-color="#ff00ff"></div>
+                        <div (click)="chooseColor('#00ffff')" class="color-option" style="background-color: #00ffff;" data-color="#00ffff"></div>
+                        <div (click)="chooseColor('#000000')" class="color-option" style="background-color: #000000;" data-color="#000000"></div>
+                        <div (click)="chooseColor('#ffffff')" class="color-option" style="background-color: #ffffff;" data-color="#ffffff"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </form>
+        
+    </div>
+</div>
